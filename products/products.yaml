@@ -32,10 +32,10 @@ spec:
         
         type Query {
           product(id: ID!): Product
-            @connect(
-              source: "ecomm"
-              http: { GET: "/products/{$args.id}" }
-              selection: "id name description"
-              entity: true
-            )
-      }
+          @connect(
+            source: "ecomm"
+            http: { GET: "/products/{$args.id}" }
+            selection: "id name description category"
+            entity: true
+          )
+}
